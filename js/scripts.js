@@ -1,12 +1,12 @@
-function Account(name, balance) {
-  this.name = name;
-  this.balance = balance;
+function Account(name, initial) {
+  this.name = FullName;
+  this.initial = initial;
 }
 
 Account.prototype.deposit = function(amount) {
   if (this._isPositive(amount)) {
-    this.balance += amount;
-    console.info(`Deposit: ${this.name} new balance is ${this.balance}`);
+    this.initial += amount;
+    console.info(`Deposit: ${this.name} new balance is ${this.initial}`);
     return true;
   }
   return false;
@@ -14,8 +14,8 @@ Account.prototype.deposit = function(amount) {
 
 Account.prototype.withdraw = function(amount) {
   if (this._isAllowed(amount)) {
-    this.balance -= amount;
-    console.info(`Withdraw: ${this.name} new balance is ${this.balance}`);
+    this.initial -= amount;
+    console.info(`Withdraw: ${this.name} new balance is ${this.initial}`);
     return true;
   }
   return false;
