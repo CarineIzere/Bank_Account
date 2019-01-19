@@ -1,0 +1,102 @@
+<html>
+   <head>   
+       <title> bank account </title>
+       <link href="css/style.css" rel="stylesheet" type="text/css">
+   </head>
+   
+   <body>
+       <div class="container">
+       <div class="jambotron">
+       <h1>BANK ACCOUNT</h1>
+    </div>
+    <div class="well" >
+            <form name='information' id="information"onSubmit="return formInformation();" action="acc.html" >
+                <p id="submit"></p>
+                    <h2>Personal information</h2> 
+                    <table>
+                            <tr>
+                              <td>Gender:</td>
+                                <td>
+                                 <input type="radio" name="msex" value="Male" required/><span>Male</span>
+                                 <input type="radio" name="fsex" value="Female" /><span>Female</span>
+                                </td>
+                               </tr>
+                               </table>
+                        <hr > 
+                    <ul>
+                       <br> 
+                        <li><label for="FullName"><b>FullName</b></label></li><br>
+                        <input type="text" placeholder="Enter FullName" name="FullName" required><br>
+                        <li><label for="address"><b>Address</b></label></li><br>
+                        <input type="text" placeholder="Enter Address" name="address" required><br>
+                        <li><label for="country"><b>Country:</b></label></li><br>
+                        <select name="country" required><br>
+                        <option selected="" value="Default">(Please select a country)</option>
+                        <option value="AF">USA</option>
+                        <option value="AL">Canada</option>
+                        <option value="DZ">India</option>
+                        <option value="AS">Kenya</option>
+                        <option value="AD">USA</option>
+                        <option value="AL">Rwanda</option>
+                        <option value="AL">Uganda</option>
+                        </select>
+                        <li><label for="PhoneNumber"><b>Phone Number</b></label></li><br>
+                        <input type="text" placeholder="Enter PhoneNumber" name="PhoneNumber" required><br>
+                        <li><label for="IdNumber"><b>ID Number</b></label></li><br>
+                        <input type="IdNumber" placeholder="Enter your ID" name="IdNumber" required><br> 
+                        <li><label for="account"><b>Kind of account</b></label></li><br>
+                        <input type="text" placeholder="Enter Kind of account" name="acount" required><br>           
+                        <li><label for="email"><b>Email</b></label></li><br>
+                        <input type="text" placeholder="Enter Email" name="email" required><br>
+                        <li><label><b>Language:</b></label></li><br>
+                        <input type="checkbox" name="en" value="en" checked /><span>Kinyarwanda</span>
+                        <input type="checkbox" name="nonen" value="noen" required/><span>English</span><br>
+                        <li><button type="submit" name="submit" value="Submit" href="acc.html">CREATE ACCOUNT</button><hr></li>
+                    </ul>
+                        
+            </form> 
+   <div class well>
+
+   </div>
+                
+        
+    </div>
+
+    </div>
+    <script>
+$(document).ready (function(formInformation)
+{
+var FullName = document.information.FullName;
+var address = document.information.address;
+var country = document.information.country;
+var PhoneNumber= document.information.PhoneNumber;
+var IdNumber= document.information.IdNumber;
+var account = document.information.account;
+var email = document.information.email;
+var msex = document.information.sex;
+var fsex = document.information.sex; 
+if(IdNumber_information(IdNumber < 16))
+{
+if(allLetter(FullName))
+{
+if(alphanumeric(address))
+{ 
+if(countryselect(country))
+{
+if(allNumber(PhoneNumber))
+{
+if(ValidateEmail(email))
+{
+if(validsex(msex,fsex))
+{
+} }} }}}}
+return false;
+}
+$("form").Submit(function())
+{
+document.getElementById("information").submit();
+}
+    
+    </script>
+   </body>
+</html>
