@@ -6,32 +6,62 @@
    </head>
    
    <body>
-        <form class="account">
-                <div class="container">
-                  <h1>PERSONAL ACCOUNT</h1>
-                    <form>
-                    
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <h2> Register</h2>
-                          <label for="FullName"><b>FullName</b></label>
-                          <input type="text" placeholder="Enter FullName" name="FullName" required><br>
-                          <label for="initial"><b>Initial</b></label>
-                          <input type="text" placeholder=" your initial deposit " name="initial" required><br>
-                        </div>
-                        <div class="col-sm-7">
-                                <h2> Deposit or withdraw</h2>
-                                <label for="deposit"><b>Deposit amount</b></label>
-                                <input type="text" placeholder="deposit" name="deposit" required><br>
-                                <label for="withdraw"><b>withdraw amount</b></label>
-                                <input type="text" placeholder="withdraw" name="withdraw" required><br>  
-                        </div>   
-                          </form>
+        <script src="https://js.stripe.com/v3/"></script>
 
-                          <form action="">
-              <h5 id="amount"></h5>
-                            <input type="submit" value="amount">
-                            <a href="index.html">PREVIOUS</a>
-                          </form>
+<form action="/charge" method="post" id="payment-form">
+  <div class="form-row inline">
+    <div class="col">
+      <label for="name">
+        Name
+      </label>
+      <input id="name" name="name" placeholder="Jenny Rosen" required>
+    </div>
+    <div class="col">
+      <label for="email">
+        Email Address
+      </label>
+      <input id="email" name="email" type="email" placeholder="jenny.rosen@example.com" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="iban-element">
+      IBAN
+    </label>
+    <div id="iban-element">
+      <!-- A Stripe Element will be inserted here. -->
+    </div>
+  </div>
+  <div id="bank-name"></div>
+
+  <button>Submit Payment</button>
+See all 44 lines
+The iDEAL Bank Element lets you collect your customers’ bank for use with iDEAL payments. It displays a list of iDEAL-member banks and their logos, allowing customers to select their bank inline (rather than in an interstitial bank selection page) and check out faster. Refer to the iDEAL Bank Element Quickstart to get started.
+
+Result HTML CSS JavaScript
+<script src="https://js.stripe.com/v3/"></script>
+
+<form id="payment-form">
+  <div class="form-row">
+    <label for="name">
+      Name
+    </label>
+    <input id="name" name="name" placeholder="Jenny Rosen" required>
+  </div>
+
+  <div class="form-row">
+    <label for="ideal-bank-element">
+      iDEAL Bank
+    </label>
+    <div id="ideal-bank-element">
+      <!-- A Stripe Element will be inserted here. -->
+    </div>
+  </div>
+
+  <button>Submit Payment</button>
+
+  <!-- Used to display form errors. -->
+    <div id="error-message" role="alert"></div>
+</form>
     </body>
     </html
