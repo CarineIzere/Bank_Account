@@ -1,37 +1,75 @@
+<!DOCTYPE html>
 <html>
-   <head>   
-       <title> bank account </title>
-       <link href="css/style.css" rel="stylesheet" type="text/css">
-       <script src="js/scripts.js"></script>
-   </head>
-   
-   <body>
-        <form class="account">
-                <div class="container">
-                  <h1>PERSONAL ACCOUNT</h1>
-                    <form>
-                    
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <h2> Register</h2>
-                          <label for="FullName"><b>FullName</b></label>
-                          <input type="text" placeholder="Enter FullName" name="FullName" required><br>
-                          <label for="initial"><b>Initial</b></label>
-                          <input type="text" placeholder=" your initial deposit " name="initial" required><br>
-                        </div>
-                        <div class="col-sm-7">
-                                <h2> Deposit or withdraw</h2>
-                                <label for="deposit"><b>Deposit amount</b></label>
-                                <input type="text" placeholder="deposit" name="deposit" required><br>
-                                <label for="withdraw"><b>withdraw amount</b></label>
-                                <input type="text" placeholder="withdraw" name="withdraw" required><br>  
-                        </div>   
-                          </form>
+<head>
+    <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+       <link rel="stylesheet" type="text/css" href="css/style.css">
+       <title>bank account</title>
+      
+    </head>
+<body>
+  <div class="gikweri">
+       <form id="bank" >
+           <div class="well">
+            <div class="jambotron">
+               <p id ="regi"><strong>You already have an account! Fill this to make sure you have it and see your transactions</strong></p>
+            </div>
+               <label><input type="text" id="namee" > <b>FullName<b></label><br>
+                <label><input type="text" id="nid"><b>IDNumber<b></label><br>
+                <label><input type="text"  id="trph"><b>Phone Number<b></label><br>
+                 <input type="email"  id="inputEmail" placeholder="Email Address"><b>Email<b></label><br>
+                 <label><input type="number" id="initial"required><b>Initial deposit<b></label><br>
+                   <button type="button" name="results" value="SUBMIT" id="new" class="btn btn-success"><b> Go to Transaction <b></button>
+           </div>
+       </form>
+  </div>
 
-                          <form action="">
-              <h5 id="amount"></h5>
-                            <input type="submit" value="amount">
-                            <a href="index.html">PREVIOUS</a>
-                          </form>
-    </body>
-    </html
+  <div class="container1">
+       <form>
+            <div clas="row">
+                <div class="col-md-6">
+                   <p id ="regi"><strong><b>Client Details<b> </strong></p>
+                    <label  id="dg"><b>FullName<b></label><br>
+                    <label  id="mg"><b>initial<b></label><br>
+                </div>
+
+                <div class="col-md-6">
+                    <p id="regi"><b>Deposit<b></p>
+                    <label><input type="text"  id="kubitsa"required><b>deposit Amount<b></label><br>
+                    
+                    <input id="submit" type="button" value="press me">
+                </div>
+            </div>                    
+        </form>
+        <form>
+            <div clas="row">
+                <div class="col-md-6">
+                   <p id ="regi"><strong><b>Client Details <b></strong></p>
+                    <label  id="dg"><b>name<b></label><br>
+                    <label  id="mg"><b>initial<b></label><br>
+                </div>
+
+                <div class="col-md-6">
+                    <p id="regi"><b>Withdraw<b> </p>
+                    <label><input type="text" id="kubikuza" required><b>Withdraw Amount<b></label><br>
+                    
+                    <input id="submit" type="button" value="press me">
+                </div>
+            </div>                    
+        </form>
+        <!-- <input type="text" id="kubitsa" name="option">
+       <input type="text" id="kubikuza" name="task">
+        <input id="submit" type="button" value="press me"> -->
+
+     <a href="index.html">PREVIOUS</a>
+                                
+</div>
+
+
+           <script src="js/jquery.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/scripts.js"></script>
+</body>
+</html>
