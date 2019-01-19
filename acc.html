@@ -9,6 +9,30 @@
         <script src="https://js.stripe.com/v3/"></script>
 
 <form action="/charge" method="post" id="payment-form">
+  <div class="form-row">
+    <label for="card-element">
+      Credit or debit card
+    </label>
+    <div id="card-element">
+      <!-- A Stripe Element will be inserted here. -->
+    </div>
+
+    <!-- Used to display form errors. -->
+    <div id="card-errors" role="alert"></div>
+  </div>
+
+  <button>Submit Payment</button>
+</form>
+The Payment Request Button lets your customers check out with Apple Pay, Google Pay, Chrome saved cards, and Microsoft Pay. When using an Apple Pay-enabled browser, your customer will see the button on the left below. When using a browser that supports the Payment Request API, they’ll see the button on the right below. Note that for demonstration purposes, these are just images, not live demos. You can read more about browser support in the Payment Request Button Quickstart.
+
+Apple Pay Button and Payment Request Button Element
+
+The IBAN Element lets you collect your customers’ bank account details. It validates IBAN formats in all SEPA countries, emits the bank’s name, and includes a dynamically updating bank logo icon for many popular banks. Refer to the IBAN Element Quickstart to get started.
+
+Result HTML CSS JavaScript
+<script src="https://js.stripe.com/v3/"></script>
+
+<form action="/charge" method="post" id="payment-form">
   <div class="form-row inline">
     <div class="col">
       <label for="name">
@@ -35,33 +59,20 @@
   <div id="bank-name"></div>
 
   <button>Submit Payment</button>
-See all 44 lines
-The iDEAL Bank Element lets you collect your customers’ bank for use with iDEAL payments. It displays a list of iDEAL-member banks and their logos, allowing customers to select their bank inline (rather than in an interstitial bank selection page) and check out faster. Refer to the iDEAL Bank Element Quickstart to get started.
-
-Result HTML CSS JavaScript
-<script src="https://js.stripe.com/v3/"></script>
-
-<form id="payment-form">
-  <div class="form-row">
-    <label for="name">
-      Name
-    </label>
-    <input id="name" name="name" placeholder="Jenny Rosen" required>
-  </div>
-
-  <div class="form-row">
-    <label for="ideal-bank-element">
-      iDEAL Bank
-    </label>
-    <div id="ideal-bank-element">
-      <!-- A Stripe Element will be inserted here. -->
-    </div>
-  </div>
-
-  <button>Submit Payment</button>
 
   <!-- Used to display form errors. -->
-    <div id="error-message" role="alert"></div>
+  <div id="error-message" role="alert"></div>
+
+  <!-- Display mandate acceptance text. -->
+  <div id="mandate-acceptance">
+    By providing your IBAN and confirming this payment, you are
+    authorizing Rocketship Inc. and Stripe, our payment service
+    provider, to send instructions to your bank to debit your account and
+    your bank to debit your account in accordance with those instructions.
+    You are entitled to a refund from your bank under the terms and
+    conditions of your agreement with your bank. A refund must be claimed
+    within 8 weeks starting from the date on which your account was debited.
+  </div>
 </form>
     </body>
     </html
